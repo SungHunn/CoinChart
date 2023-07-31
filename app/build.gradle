@@ -47,4 +47,14 @@ dependencies {
 
     implementation 'com.jakewharton.timber:timber:5.0.1' //로그 찍는 라이브러리
     implementation 'androidx.core:core-splashscreen:1.0.1' //스플래시 화면
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5' //navigation
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0' //retrofit
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'//coroutine
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+
 }
