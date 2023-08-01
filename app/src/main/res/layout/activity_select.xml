@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="관심 있는 코인들을\n선택해 주세요!"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="#000000"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

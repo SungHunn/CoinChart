@@ -3,20 +3,36 @@ package com.example.coinchart.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.coinchart.dataModel.CurrentPriceResult
 import com.example.coinchart.databinding.ActivitySelectBinding
+import com.example.coinchart.view.adapter.SelectRVAdapter
+import timber.log.Timber
 
 class SelectActivity : AppCompatActivity() {
 
-    var binding: ActivitySelectBinding? = null
+    lateinit var binding: ActivitySelectBinding
     private val viewModel : SelectViewModel by viewModels()
+
+    private lateinit var selectRVAdapter: SelectRVAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivitySelectBinding.inflate(layoutInflater)
-        setContentView(binding!!.root)
+        setContentView(binding.root)
 
 
         viewModel.getCurrentCoinList()
+        viewModel.currentPriceResult.observe(this) {
+
+            selectRVAdapter = SelectRVAdapter(this, it)
+
+            binding.coinListRV.adapter = selectRVAdapter
+            binding.coinListRV.layoutManager = LinearLayoutManager(this)
+
+        }
     }
 }
