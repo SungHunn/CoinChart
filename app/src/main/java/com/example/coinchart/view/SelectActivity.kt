@@ -4,11 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.coinchart.MainActivity
-import com.example.coinchart.dataModel.CurrentPriceResult
+import com.example.coinchart.view.main.MainActivity
 import com.example.coinchart.databinding.ActivitySelectBinding
 import com.example.coinchart.view.adapter.SelectRVAdapter
 import timber.log.Timber
@@ -51,7 +48,7 @@ class SelectActivity : AppCompatActivity() {
 
         viewModel.save.observe(this){
             if (it.equals("done")){
-
+                Timber.d("hi")
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)

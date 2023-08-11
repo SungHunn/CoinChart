@@ -6,10 +6,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.example.coinchart.MainActivity
-import com.example.coinchart.R
+import com.example.coinchart.view.main.MainActivity
 import com.example.coinchart.databinding.ActivityIntroBinding
-import timber.log.Timber
 
 class IntroActivity : AppCompatActivity() {
 

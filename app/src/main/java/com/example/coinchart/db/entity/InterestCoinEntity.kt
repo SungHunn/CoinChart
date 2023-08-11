@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
-@Entity(tableName = "interest_coin_table")
+@Entity(tableName = "interest_coin_table2")
 data class InterestCoinEntity(
 
     @PrimaryKey(autoGenerate = true)

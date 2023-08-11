@@ -14,7 +14,7 @@ interface InterestCoinDao {
 
     //getAllData
     //Flow : 데이터의 변경 사항을 감지하기 좋음
-    @Query("SELECT * FROM interest_coin_table")
+    @Query("SELECT * FROM interest_coin_table2")
     fun getAllData() : Flow<List<InterestCoinEntity>>
 
     //insert
@@ -26,6 +26,6 @@ interface InterestCoinDao {
     fun update(interestCoinEntity: InterestCoinEntity)
 
     //getSelectedCoinList
-    @Query("SELECT * FROM interest_coin_table WHERE selected = :selected")
+    @Query("SELECT * FROM interest_coin_table2 WHERE selected = :selected")
     fun getSelectedData(selected : Boolean = true) : List<InterestCoinEntity>
 }
