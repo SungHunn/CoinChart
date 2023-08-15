@@ -24,10 +24,6 @@ class CoinListFragment : Fragment() {
     private val selectedList = ArrayList<InterestCoinEntity>()
     private val unSelectedList = ArrayList<InterestCoinEntity>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
